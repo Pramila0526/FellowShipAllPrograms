@@ -1,0 +1,16 @@
+package com.bridgelabz.fellowshipprogramss.datastructure;
+
+import java.io.FileWriter;
+
+public class abc {
+	
+	    public static void main(String args[]){    
+	         try{    
+	           FileWriter fw=new FileWriter("/home/admin94/Desktop/Text");    
+	           fw.write("Welcome to javaTpoint.");    
+	           fw.close();    
+	          }catch(Exception e){System.out.println(e);}    
+	          System.out.println("Success...");    
+	     }    
+	}  
+

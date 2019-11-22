@@ -1,0 +1,57 @@
+package com.bridgelabz.fellowshipprogramss.utility;
+
+
+import java.util.*;
+
+
+public class PrimeAnagramQueue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer>prime=new ArrayList<>();
+		List<Integer>anagram=new ArrayList<>();
+		CustomQueue queue=new CustomQueue(200);
+		int count=0,num1,num2,anagramnum;
+		boolean anagramResult=false;
+		
+		for( num1=0;num1<=1000;num1++)
+		{
+			count=Utility.isPrime(num1);
+			if(count==0)
+			{
+				prime.add(num1);
+			}
+		}
+		System.out.println("List Of prime Numbers is");
+		System.out.println(prime);
+		
+		for(int i=1;i<prime.size();i++)
+		{
+			num1=prime.get(i);
+			for(int j=i+1;j<prime.size();j++)
+			{
+				num2=prime.get(j);
+				String str1=Integer.toString(i);
+				String str2=Integer.toString(j);
+				anagramResult=DSUtility.isAnagram(str1,str2);
+				if(anagramResult)
+				{
+					anagram.add(num1);
+					break;
+				}
+			}
+		}
+		System.out.println("Anagram Number are");
+		System.out.println(anagram);
+		System.out.println("Anagram number added in Queue are");
+		
+		for(int i=0;i<anagram.size();i++)
+		{
+			anagramnum=anagram.get(i);
+			int  a=anagramnum;
+			queue.insert(a);
+			System.out.println(anagramnum+" ");
+		}
+	}
+
+}

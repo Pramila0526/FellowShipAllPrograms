@@ -1,0 +1,14 @@
+package com.bridgelabz.fellowshipprogramss.datastructure;
+
+public class LinkedQueue
+{
+public static void main(String[] args) 
+	{
+		LinkedQueue<Integer> l = new LinkedQueue<Integer>();
+		l.display();
+		System.out.println("==");
+		l.remove();
+		l.display();
+		System.out.println(l.isEmpty());
+	}
+}

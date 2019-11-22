@@ -1,0 +1,79 @@
+package com.bridgelabz.fellowshipprogramss.utility;
+
+import java.lang.Long;
+import java.lang.NumberFormatException;
+
+
+public class PrimeChecker {
+
+   public static String PRIME_NUMBER_MESSAGE = " is a prime number";
+
+   
+   public static String NOT_PRIME_NUMBER_MESSAGE = " is not a prime number";
+
+  
+   private long mInputNumber;
+
+   
+   private boolean mIsPrime;
+
+  
+    
+   
+   public PrimeChecker() {
+      mInputNumber = 0; 
+      this.checkPrime();
+   }
+
+  
+   public PrimeChecker(long number) {
+      mInputNumber = number; 
+      this.checkPrime();
+   }
+
+  
+   public void checkPrime() {
+      mIsPrime = checkPrime(mInputNumber);
+   }
+
+   
+   public String toString() {
+      String message = "";
+      // retrun string based on the mInputNumber is prime or not
+      if (mIsPrime) message = mInputNumber + PRIME_NUMBER_MESSAGE;
+      else message = mInputNumber + NOT_PRIME_NUMBER_MESSAGE;
+      return message;
+   }
+
+   
+   public static boolean checkPrime(long n) {
+      boolean isPrime = true;
+
+      if (n < 2) isPrime = false;
+
+      
+      for (long factor = 2; factor*factor <= n; factor++) {
+        
+         if (n % factor == 0) {
+             isPrime = false;
+             break;
+         }
+      }
+      return isPrime;
+   }
+
+   public static void main(String[] args) { 
+      long n = 3;
+
+      
+      boolean isPrime = PrimeChecker.checkPrime(n);
+      System.out.println("PRINTING RESULT USING PrimeChecker STATIC FUNCTION");
+      if (isPrime) System.out.println(n + PrimeChecker.PRIME_NUMBER_MESSAGE);
+      else System.out.println(n + PrimeChecker.NOT_PRIME_NUMBER_MESSAGE);
+
+    
+      PrimeChecker primeChecker = new PrimeChecker(n);
+      System.out.println("PRINTING RESULT USING PrimeChecker INSTANCE FUNCTION");
+      System.out.println(primeChecker.toString());
+   }
+}

@@ -1,0 +1,23 @@
+
+public class Merge 
+{
+	public static void main(String args[])
+	{
+		MergeLinkedList ml = new MergeLinkedList();
+		ml.insert1();
+		System.out.println("Elements are");
+		ml.display();
+
+		MergeLinkedList2 ml2 = new MergeLinkedList2();
+		ml2.insert21();
+		System.out.println("Elements are");
+		ml2.display22();
+		
+    /* Node temp=head;
+       Node index=noOfElements.next;
+       while(temp!=null)*/
+       {
+    	   
+       }
+	}
+}

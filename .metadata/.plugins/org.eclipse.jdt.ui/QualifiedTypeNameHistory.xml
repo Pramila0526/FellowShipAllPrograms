@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.AlgorithmUtility"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.JUnitUility"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.logical.BasicCoreUtility"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.BasicCoreUtility"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.FunctionalUtility"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.ListIterator"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.DataStructure.LinkedList"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.BalancedParanthesis"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.BalancedParan"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.BalanceParenthesis"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.DataStructure"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.datastructure.LinkedQueue"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.datastructure.LinkedStack"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.DequeueForPalindrome"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.datastructure.UnOrderedList"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.datastructure.OrderedList"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.PrintStream"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Utility"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Node"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogramss.utility.Utility"/>
+</qualifiedTypeNameHistroy>

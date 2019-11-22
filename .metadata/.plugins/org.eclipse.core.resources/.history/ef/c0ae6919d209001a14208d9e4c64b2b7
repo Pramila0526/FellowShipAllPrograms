@@ -1,0 +1,43 @@
+package com.bridgelabz.fellowshipprogramss.utility;
+
+//Java implementation of the approach 
+import java.io.*; 
+
+class bcount 
+{ 
+	
+//Function to return the count 
+//of unique BSTs with n keys 
+static int uniqueBSTs(int n) 
+{ 
+	int n1, n2, sum = 0; 
+
+	// Base cases 
+	if (n == 1 || n == 0) 
+		return 1; 
+
+	// Find the nth Catalan number 
+	for (int i = 1; i <= n; i++) 
+	{ 
+
+		// Recursive calls 
+		n1 = uniqueBSTs(i - 1); 
+		n2 = uniqueBSTs(n - i); 
+		sum += n1 * n2; 
+	} 
+
+	// Return the nth Catalan number 
+	return sum; 
+} 
+
+//Driver code 
+public static void main (String[] args) 
+{ 
+
+	int n = 3; 
+	System.out.println (uniqueBSTs(n)); 
+
+} 
+} 
+
+//This code is contributed by jit_t. 

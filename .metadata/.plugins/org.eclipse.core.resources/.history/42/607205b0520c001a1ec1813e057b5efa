@@ -1,0 +1,14 @@
+package com.bridgelabz.fellowshipprogramss.junit;
+
+import com.bridgelabz.fellowshipprogramss.utility.Utility;
+
+public class SquareNewton 
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Enter the  Number");
+        double c=Utility.doubleInput();
+        double epsilon = 1e-15;   
+        System.out.println(Utility.sqrtNewton(c, epsilon));
+    }
+}

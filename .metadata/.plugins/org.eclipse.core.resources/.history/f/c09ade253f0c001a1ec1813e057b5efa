@@ -1,0 +1,16 @@
+package com.bridgelabz.fellowshipprogramss.algorithm;
+
+import java.util.*;
+
+import com.bridgelabz.fellowshipprogramss.utility.Utility;
+
+public class Permutation {
+
+public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the String");
+		String s = sc.nextLine();
+		String output3 = Utility.permutationusingrecusrion(s, 0, s.length());
+	}
+}

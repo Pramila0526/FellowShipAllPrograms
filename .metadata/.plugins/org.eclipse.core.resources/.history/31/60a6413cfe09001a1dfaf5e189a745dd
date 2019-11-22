@@ -1,0 +1,10 @@
+package com.bridgelabz.fellowshipprogramss.utility;
+
+public class PakindromeChecker {
+
+	public static void main(String[] args) 
+	{
+	
+	}
+
+}

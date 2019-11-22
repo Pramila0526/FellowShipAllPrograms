@@ -1,0 +1,97 @@
+package com.bridgelabz.fellowshipprogramss.functional;
+
+
+import java.io.IOException;
+
+import MergeLinkedList.Node;
+
+/**
+ * @author Pramila0526
+ * Date   :19/11/2019
+ *
+ */
+
+public class Merging
+{
+	static Node head; 
+
+	public static class Node 
+	{ 
+		int data; 
+		Node next; 
+		Node(int d) 
+		{
+			
+	    data = d; 
+		next = null;
+		} 
+	} 
+	public int noOfElements() {
+		int size = 0;
+		if (head == null) 
+		{
+			return size;
+		}
+		Node temp = head;
+		while (temp != null) {
+			size++;
+			temp = temp.next;
+		}
+		return size;
+	}
+	
+	
+    public static int insert(int data)
+	{
+		Node new_node=new Node(data);
+		new_node.next=null;
+		if(head==null)
+		{
+			head=new_node;
+		}
+		else 
+		{
+		Node p=head;
+		while(p.next!=null)
+		{
+			p=p.next;
+		}
+		p.next=new_node;
+	
+		
+	}
+		return data;
+	
+	}
+    
+   
+	public static void  display()
+	{
+		Node p=head;
+		while(p!=null)
+		{
+			System.out.println(p.data+ "\t");
+			p=p.next;
+		}
+		System.out.println();
+	}
+	
+	
+ public static void main(String args[]) throws IOException
+  { 
+	 Merging list = new Merging();
+	   System.out.println("Enter the Elements");
+	  	 list.insert(6); 
+		 /list.insert(3); 
+		 list.insert(1); 
+		 list.insert(4);
+		 list.display(); 
+		
+		 list.display(); 
+		 list.sortList();
+		 list.display();
+	
+	}
+}
+
+

@@ -1,0 +1,16 @@
+package com.bridgelabz.fellowshipprogramss.basiccore;
+
+import com.bridgelabz.fellowshipprogramss.utility.Utility;
+
+public class PrimeFactor 
+{
+
+		public static void main(String args[])
+		{
+			
+			System.out.println("Enter the Number");
+			int n=Utility.IntegerInput();
+			
+
+	}
+

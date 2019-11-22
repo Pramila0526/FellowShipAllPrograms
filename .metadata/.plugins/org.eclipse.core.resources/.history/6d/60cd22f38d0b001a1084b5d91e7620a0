@@ -1,0 +1,37 @@
+public class hashing2
+{
+  	OrderedList[] ol=new OrderedList[11];
+ // 	NodeUtility nu=new NodeUtility();
+
+  	public  hashing2()
+  	{
+		int[] array = { 11,22,33,54,65,76,78};
+
+		for(int i=0; i<array.length; i++)
+		{
+			int rem = array[i]%11;
+			if(ol[rem]== null)
+			{
+				ol[rem] = new OrderedList();
+				ol[rem].insert(array[i]);
+			}
+			else
+			{
+				ol[rem].insert(array[i]);
+            }
+		}
+		for(int i=0;i<11;i++)
+		{
+			System.out.println(i);
+			if(ol[i] !=null)
+			{
+				ol[i].display();
+			}
+		}
+	}
+
+    public static void main(String[] args)
+    {
+      	HashingFunction hs=new HashingFunction();
+    }
+}

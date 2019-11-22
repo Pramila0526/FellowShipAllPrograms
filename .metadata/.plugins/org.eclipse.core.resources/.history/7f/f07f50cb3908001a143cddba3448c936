@@ -1,0 +1,27 @@
+package com.bridgelabz.fellowshipprogramss.datastructure;
+
+import java.io.FileWriter;
+
+import com.bridgelabz.fellowshipprogramss.utility.DataStructure;
+
+public class abc {
+	
+	    public static void main(String args[])
+	    {    
+	         try
+	         {    
+	        	 
+	        	DataStructure d=new DataStructure()
+	           FileWriter fw=new FileWriter("/home;/admin94/Desktop/Text");    
+	           String x="j";
+			   fw.write(fw.DataStructure.LinkedList.search(x));    
+	           fw.close();    
+	          }
+	         catch(Exception e)
+	         {
+	        	 System.out.println(e);
+	        	 }    
+	          System.out.println("Success...");    
+	     }    
+	}  
+

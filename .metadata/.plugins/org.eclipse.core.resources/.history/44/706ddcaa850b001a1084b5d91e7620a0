@@ -1,0 +1,41 @@
+
+
+public class Merge 
+{
+	Node head;
+	public static class Node
+	{
+		int data;
+		Node next;
+
+		Node(int data) 
+		{
+
+			this.data = data;
+			next = null;
+		}
+	}
+	public static void main(String args[])
+	{
+		
+		MergeLinkedList ml = new MergeLinkedList();
+		ml.insert1();
+		System.out.println("Elements are");
+		
+
+		MergeLinkedList2 ml2 = new MergeLinkedList2();
+		ml2.insert21();
+		System.out.println("Elements are");
+		ml.display();
+		ml2.display22();
+		MergeLinkedList.Node temp =ml.head;
+		MergeLinkedList2.Node temp1 =ml2.head;
+		while(temp!=null && temp1!=null)
+		{
+			temp.next=
+		}
+		
+		ml.display();
+	
+}
+}

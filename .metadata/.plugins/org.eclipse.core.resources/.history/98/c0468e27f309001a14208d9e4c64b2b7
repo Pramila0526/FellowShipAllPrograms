@@ -1,0 +1,120 @@
+package com.bridgelabz.fellowshipprogramss.utility;
+
+import java.util.Random;
+import java.util.Scanner;
+public class Teller
+{
+
+
+
+ 	int  runTime, customerArrival, transactionTime;
+Queue<Node<Customer>> q = new Queue<Node<Customer>>();
+int customers=0;
+int totalTime=0;
+
+
+
+  public Teller(int run, int maxNewCustomer, int maxHandle)
+	 {
+		runTime= run;
+    	customerArrival= maxNewCustomer;
+    	transactionTime = maxHandle;
+	 }//end constructor
+
+	 public int runTime(){
+ 	   return runTime;
+ 	 }//end runTime
+
+ 	 public int getTransactionTime(){
+ 	   return transactionTime;
+ 	 }//endTransactionTime
+
+ 	 public int getCustomerArrival(){
+ 	   return customerArrival;
+ 	 }//end getCustomerArrival
+int randTrans=(int)(Math.random() * transactionTime);
+Customer c=new Customer(randTrans);
+
+
+    public void Run()
+	  {
+
+		  Random rand= new Random();
+
+		  int newArrival = (int)(Math.random() * customerArrival);
+
+
+		  q.empty();
+		  int time;
+		   Node<Customer> next=new Node<Customer>();
+		  for(time=0;time<runTime; time++)
+		  {
+
+			if(time<newArrival)
+			  {
+				  System.out.println(newArrival);
+
+
+				q.enqueue(next);
+				customers++;
+			
+				int newOne=(int)(Math.random()* customerArrival);
+				System.out.println(newOne);
+				int nextOne=c.currentTime+newOne;
+
+				System.out.println(nextOne);
+
+
+				if(nextOne>=time)
+				{
+				     q.dequeue();
+				     customers++;
+				     System.out.println(newArrival);
+				     newOne=(int)(Math.random()* customerArrival);
+				     nextOne=time+newOne;
+
+
+
+
+
+			  }//end if
+		  	}//end if
+		  }//end for
+	  }//end Run
+	  public void report()
+	  {
+		  int totalTime=c.clock;
+		  System.out.println("total time: "+totalTime);
+		  int Average=totalTime/customers;
+		  		  System.out.println("average wait time: "+Average);
+
+		  int numberServed=customers;
+		  		  System.out.println("number served: "+numberServed);
+
+		  if(q.empty()==true)
+		  {
+			  System.out.println(q.toString());
+			  System.out.println(c.clock);
+		  }//end if
+	  }//end report
+
+	   public static void main(String[]args)
+	  	  {
+
+
+
+	  		  Scanner key=new Scanner(System.in);
+	  		  System.out.println("how many seconds to run: ");
+	  		  int newRunTime=key.nextInt();
+	  		  System.out.println("max time between customers: ");
+	  		  int newCustomerArrival=key.nextInt();
+	  		  System.out.println("max processing time: ");
+	  		  int newTransTime=key.nextInt();
+	  		  Teller t= new Teller(newRunTime,newCustomerArrival,newTransTime);
+	  		  t.Run();
+	  		  t.report();
+
+	  	  }//end main
+}
+
+

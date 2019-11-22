@@ -1,0 +1,25 @@
+package com.bridgelabz.fellowshipprogramss.basiccore;
+
+import com.bridgelabz.fellowshipprogramss.utility.Utility;
+
+
+
+public class StopWatch
+{
+	//sample usage
+	public static void main(String[] args) {
+	    StopWatch s = new StopWatch();
+	    s.start();
+	   
+	    System.out.println("Enter Start time");
+	    long startTime=Utility.IntegerInput();
+	    
+	    System.out.println("Enter Stop time");
+	    long stopTime=Utility.IntegerInput();
+	    s.stop();
+	    System.out.println("elapsed time in milliseconds: " + s.getElapsedTime());
+	    System.out.println("elapsed time in 1seconds: " + s.getElapsedTimeSeconds());
+	
+	}
+	
+}

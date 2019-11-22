@@ -1,0 +1,116 @@
+import java.util.Scanner;
+
+public class MergeLinkList2
+{
+static Node head;
+static Scanner sc = new Scanner(System.in);
+
+public static int IntegerInput() {
+	return sc.nextInt();
+}
+
+
+public static class Node
+{
+int data;
+Node next;
+Node(int data)
+{
+
+ this.data = data;
+  next = null;
+}
+}
+
+
+
+public  int size()
+{
+int size=0;
+if(head==null)
+{
+return size;
+}
+Node temp=head;
+while(temp!=null)
+{
+size++;
+temp=temp.next;
+}
+return size;
+}
+
+
+public  void display()
+{
+if(head==null)
+{
+System.out.println("no elements to display");
+}
+Node temp=head;
+while(temp!=null)
+{
+
+System.out.print(temp.data+"---->");
+temp=temp.next;
+
+}
+System.out.print("null");
+System.out.println();
+
+//Node head=
+}
+
+public  int insert()
+{
+
+Node newnode= new Node(IntegerInput());
+Node temp= head;
+if(head==null)
+{
+head= newnode;
+return newnode.data;
+}
+
+while(temp.next != null) {
+temp= temp.next;
+}
+
+temp.next=newnode;
+
+return newnode.data;
+
+}
+
+public  void limitInsert()
+{
+System.out.println("enter the size of list");
+int size=IntegerInput();
+System.out.println("enter the data you want to insert");
+while(size>0)
+{
+insert();  //no need of creating object to call the methods of the same class
+size--;
+}
+}
+
+
+public static void main(String[] args)
+{
+	MergeLinkList2 sll1=new MergeLinkList2();
+sll1.limitInsert();
+System.out.println("inserted elements are:");
+sll1.display();
+
+
+MergeLinkList2 sll2=new MergeLinkList2();
+sll2.limitInsert();
+System.out.println("inserted elements are:");
+sll2.display();
+
+
+}
+
+
+
+}

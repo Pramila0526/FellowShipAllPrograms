@@ -1,0 +1,136 @@
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class abc 
+{
+	static class Node
+	{
+		String data;
+		Node next;
+
+		Node(String s)
+		{
+			this.data=s;
+			this.next=null;
+		}
+	}
+
+	public static Node head=null;
+
+	
+	public static void addNode(String s)
+	{
+		Node newNode=new Node(s);
+
+		if(head==null)
+		{
+			head=newNode;
+		}
+		else
+		{
+			Node current=head;
+			
+			while(current.next!=null)
+			{
+				current=current.next;
+			}
+			current.next=newNode;
+		}
+
+	}
+
+
+	public void searchNode(String key)
+	{
+		Node current=head;
+		Node prev=null;
+		boolean flag=false;
+		if(current.data.equals(key))
+		{
+			head=current.next;
+			//System.out.println("List is empty");
+		}
+		else
+		{
+			while(current!=null && current.data.equals(key)!=true)
+			{
+				prev=current;
+				current=current.next;
+			}
+			if(current!=null)
+			{
+				flag=true;
+				prev.next=current.next;
+			}
+			
+		}
+		
+		/*
+		 * if(flag) { System.out.println("String is present"); } else {
+		 * System.out.println("String is not present"); }
+		 */
+
+
+	}
+
+	public void display()
+	{
+		System.out.println("Display method:");
+
+		Node current=head;
+		if(head==null)
+		{
+			System.out.println("List is empty");
+		}
+		else
+		{
+			int i=0;
+			while(current!=null)
+			{
+				System.out.println(current.data+" ");
+				current=current.next;
+				i++;
+				System.out.println(i);
+			}
+		}
+	}
+	public static void main(String[] args) 
+	{
+		File file=new File("abc.txt");
+
+		try
+		{
+
+			FileReader fr=new FileReader(file);
+			Scanner scn=new Scanner(fr);
+			UnorderedListEx uo=new UnorderedListEx();	
+			Scanner scan=new Scanner(System.in); 
+			String s1="";
+
+			while(scn.hasNext())
+			{
+				s1=scn.next();
+				addNode(s1);
+				System.out.println(s1);
+
+			}
+			uo.display();
+
+			System.out.println("Enter the string you want to search");
+			String s2=scan.next();
+			uo.searchNode(s2);
+			uo.display();
+		} 
+		catch (FileNotFoundException e) 
+		{
+			e.printStackTrace();
+		}
+
+	}
+}
+UnorderedListEx.java
+Displaying UnorderedListEx.java.

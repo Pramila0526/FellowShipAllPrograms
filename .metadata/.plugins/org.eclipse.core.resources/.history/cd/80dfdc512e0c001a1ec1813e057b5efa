@@ -1,0 +1,13 @@
+package com.bridgelabz.fellowshipprogramss.basiccore;
+
+import java.util.*;
+
+public class Coupon
+{
+	public static void main(String[] args) 
+	{
+
+		
+		String us="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		
+}

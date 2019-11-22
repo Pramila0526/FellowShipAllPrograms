@@ -1,0 +1,19 @@
+package com.bridgelabz.fellowshipprogramss.utility;
+
+
+public class Customer
+{
+	int clock, currentTime;
+	public Customer()
+	{}
+	public Customer(int theTime)
+	{
+		clock=theTime;
+	}
+
+	public int getCurrent(int current)
+	{
+		 currentTime=clock-current;
+		 return currentTime;
+	}
+}

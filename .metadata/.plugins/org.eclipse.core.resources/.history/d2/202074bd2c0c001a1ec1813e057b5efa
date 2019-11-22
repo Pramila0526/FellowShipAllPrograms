@@ -1,0 +1,34 @@
+package com.bridgelabz.fellowshipprogramss.basiccore;
+
+public class Gambler 
+{
+
+	public static void main(String[] args)
+	{
+    int stake=100;
+    int goal=500;
+    int trials=50;
+		int bets=0;
+		int win=0;
+		for(int i=0;i<trials;i++)
+		{
+			int cash=stake;
+			while(cash>0 && cash<goal)
+			{
+				bets++;
+				if(Math.random() > 0.5)
+					cash++;
+				else
+			 cash--;
+	
+			}
+		    if(cash==goal)
+			win++;
+	
+	   }
+		System.out.println(win+ " wins of " +trials);
+		System.out.println("Percentage of game won " +100 * win/trials);
+		System.out.println("Avg bets " +1.0 * bets/trials);
+
+  }
+}

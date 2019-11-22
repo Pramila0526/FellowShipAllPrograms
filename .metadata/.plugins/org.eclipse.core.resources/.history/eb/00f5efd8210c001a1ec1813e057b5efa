@@ -1,0 +1,26 @@
+package com.bridgelabz.fellowshipprogramss.basiccore;
+
+import com.bridgelabz.fellowshipprogramss.utility.Utility;
+
+public class PowerOf2 
+{
+	public static void main(String[] args) 
+	{
+		
+		System.out.println("Enter the powers ");
+		int n=Utility.IntegerInput();
+		if(0 < n || n < 31 )
+		
+		for(int i=0;i<=n;i++)
+		{
+			int result= (int) Math.pow(2, i);
+			System.out.println("2^" +i+ "=" +result);
+			
+		}
+		else
+			System.out.println("OverFlows");
+
+	}
+
+
+}

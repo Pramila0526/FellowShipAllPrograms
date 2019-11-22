@@ -1,0 +1,34 @@
+package com.bridgelabz.fellowshipprogramss.algorithm;
+import java.util.Scanner;
+
+import com.bridgelabz.fellowshipprogramss.utility.Utility;
+
+public class GuessGame
+{
+	public static void main(String[] args)
+	{
+		
+	System.out.println("Enter the First Number");
+	int low=Utility.IntegerInput();
+	System.out.println("Enter the Second Number");
+	int high=Utility.IntegerInput();
+	 System.out.println("Guess a number between " +low+ " and " +high);
+	
+	    int middle;
+		while (low != high) 
+		{
+			middle = (low + high) / 2;
+			System.out.println("Enter 1 if no is between " + low + " - " + middle  );
+			System.out.println("Enter 2 if no is between "	+ (middle) + " - " + high);
+			int c = Utility.IntegerInput();
+			middle = (low + high) / 2;
+			if (c == 1)
+				high = middle;
+			else
+				low = middle + 1;
+		}
+		
+	            System.out.println("guessed no is " +low);
+		
+		}
+	}

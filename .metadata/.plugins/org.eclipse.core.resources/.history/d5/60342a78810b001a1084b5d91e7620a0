@@ -1,0 +1,97 @@
+import java.util.Scanner;
+
+
+
+public class MergeLinkedList2
+{
+	static Scanner sc = new Scanner(System.in);
+
+	public static int IntegerInput() {
+		return sc.nextInt();
+	}
+
+	public static double doubleInput() {
+		return sc.nextDouble();
+	}
+
+	public static String stringInput() {
+		return sc.nextLine();
+	}
+ static Node head;
+
+	public static class Node {
+		int data;
+		Node next;
+
+		Node(int data) {
+
+			this.data = data;
+			next = null;
+		}
+	}
+
+	public int noOfElements() {
+		int no = 0;
+		if (head == null) 
+		{
+			return no;
+		}
+		Node temp = head;
+		while (temp != null) {
+			no++;
+			temp = temp.next;
+		}
+		return no;
+	}
+
+	public void display() {
+		if (head == null) {
+			System.out.println("No Elements");
+		}
+		Node temp = head;
+		while (temp != null) {
+
+			System.out.print(temp.data + "-->");
+			temp = temp.next;
+
+		}
+		System.out.print("null");
+		System.out.println();
+
+
+	}
+
+	public static int insert() 
+	{
+
+		Node newnode = new Node(IntegerInput());
+		Node temp = head;
+		if (head == null) {
+			head = newnode;
+			return newnode.data;
+		}
+
+		while (temp.next != null) {
+			temp = temp.next;
+		}
+
+		temp.next = newnode;
+
+		return newnode.data;
+
+	}
+	
+
+	public void insert1()
+	{
+		System.out.println("Enter the No of nodes");
+		int size = IntegerInput();
+		System.out.println("Enter the Elements");
+		while (size > 0) 
+		{
+			insert(); 
+			size--;
+		}
+		
+	}
+}
